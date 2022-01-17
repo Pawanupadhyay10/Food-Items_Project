@@ -61,15 +61,3 @@ for(let but of add)
         cart1.classList.add('on');
     }
 }
-
-// get recipe of the meal
-// function getMealRecipe(e){
-//     e.preventDefault();
-//     if(e.target.classList.contains('recipe-btn')){
-//         let mealItem = e.target.parentElement.parentElement;
-//         fetch("app1.json?i=${mealItem.dataset.id}")
-//         .then(response => response.json())
-//         .then(data => mealRecipeModal(data.meals));
-//     }
-// }
-
