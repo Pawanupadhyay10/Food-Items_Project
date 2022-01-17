@@ -1,19 +1,25 @@
 const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
 const mealDetailsContent = document.querySelector('.meal-details-content');
-const recipeCloseBtn = document.getElementById('recipe-close-btn');
-
-
-
-
+// const recipeCloseBtn = document.getElementById('recipe-close-btn');
 // event listeners ,add functionality to buttons
 searchBtn.addEventListener('click', getMealList);
-mealList.addEventListener('click', getMealRecipe);
+// mealList.addEventListener('click', getMealRecipe);
 recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');
 });
 
-
+var cart = document.getElementById('basket');
+var select = document.querySelector('.select');
+var add = document.querySelector('.recipe-btn');
+for(var but of add)
+    {
+        but.addEventListener('click', (e)=>{
+            var item = Number(cart.getAttribute('data-count') || 0);
+            cart.setAttribute('data-count', item + 1);
+            cart.classList.add('on')
+        })
+    }
 // get meal list that matches with the ingredients
 function getMealList(){
     let searchInputTxt = document.getElementById('search-input').value.trim();
@@ -35,13 +41,15 @@ function getMealList(){
                             <h3>${meal.desc}</h3>
                             </br>
                             <h4>${meal.price}</h4>
-                        
-                            <button type=submit class="recipe-btn">Add to Cart</button>
+                            <p>
+                            <button  class="recipe-btn">Add to Cart</button>
+                            </p>
                         </div>
                     </div>
+                    
                 `;
             });
-          
+         
             mealList.classList.remove('notFound');
         } else{
             html = "Sorry, we didn't find any meal!";
@@ -50,14 +58,4 @@ function getMealList(){
 
         mealList.innerHTML = html;
     });
-}
-let cart1 = document.querySelector('.cart');
-let add = document.getElementsByClassName('recipe-btn');
-for(let but of add)
-{
-    but.onclick = e=>{
-        let item = Number(cart1.getAttribute('data-count') || 0);
-        cart1.setAttribute('data-count', item+1);
-        cart1.classList.add('on');
-    }
 }
