@@ -6,22 +6,10 @@
   <title>Find Meal For Your Ingredients</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link rel = "stylesheet" href = "style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-  </script>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-  </script>
-  
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-  </script>
 </head>
 <body>
   
   <div class = "container">
-    <input type='hidden' id='current_page' />
-    <input type='hidden' id='show_per_page' />
     <div class = "meal-wrapper">
       <div class = "meal-search">
         <h2 class = "title">Find Meals For Your Ingredients</h2>
@@ -36,7 +24,7 @@
             <i class = "fas fa-search"></i>
           </button>
         </div>
-        <button type="submit" class="cart" id="search">Cart</button>
+        <h1 id="basket"><i class=" fa fa-shopping-cart"></i></h1>
       </div>
 
       <div class = "meal-result">
@@ -55,6 +43,8 @@
           <!-- end of meal item -->
         </div>
       </div>
+
+
       <div class = "meal-details">
         <!-- recipe close btn -->
         <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">
@@ -62,7 +52,7 @@
         </button>
 
         <!-- meal content -->
-        <div class = "meal-details-content">
+        <div class = "select">
           <!-- <h2 class = "recipe-title">Meals Name Here</h2>
           <p class = "recipe-category">Category Name</p>
           <div class = "recipe-instruct">
@@ -78,21 +68,11 @@
           </div> -->
         </div>
       </div>
-    <div class="container" >
-      <nav aria-label="Page navigation example" style="margin-left: 40%;">
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-      </nav>
     </div>
-    </div>
-    
   </div>
-<!-- Pa -->
+
+
+
   <script src = "script.js"></script>
 </body>
 </html>
